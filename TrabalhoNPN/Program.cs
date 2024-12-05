@@ -31,10 +31,17 @@ public class Algoritimo
         };
     }
 
+
     [Benchmark]
     public void Teste()
     {
         var ordering = FeedbackArc.ComputeOrdering(graph);
+    }
+
+    [Benchmark]
+    public void BruteForceTest()
+    {
+        var ordering = BruteForceFeedbackArc.ComputeOrdering(graph);
     }
 
     private Graph GenerateCycleGraph(int vertices)
